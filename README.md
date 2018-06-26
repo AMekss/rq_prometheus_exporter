@@ -10,6 +10,7 @@ docker build -t rq-prometheus-exporter .
 ```
 
 #### Run it
+There is `RQ_REDIS_URI` environment variable available to setup URL for the redis used by RQ
 ```
 docker run -it --rm -p 4567:8000 rq-prometheus-exporter
 ```

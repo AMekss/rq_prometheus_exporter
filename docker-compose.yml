@@ -9,9 +9,14 @@ services:
       - 4567:8000
     volumes:
       - .:/app
+    environment:
+      - RQ_REDIS_URI=redis://redis:6379/0
     command:
       - gunicorn
       - "-b 0.0.0.0:8000"
       - "-w 1"
       - "--reload"
       - api:api
+
+  redis:
+    image: redis:3.0.2
