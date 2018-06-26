@@ -1,3 +1,4 @@
 rq
 flask==0.12.2
 gunicorn==19.7.1
+pytest

@@ -29,6 +29,11 @@ docker-compose up
 ```
 Container will be exposed on port `4567` of docker host machine and hot reloading is enabled so all changes to code have to be seen even without restarting gunicorn process or container (it might take a few seconds for process to reload though)
 
+Running tests
+```
+docker-compose run --rm exporter pytest
+```
+
 **Note:** For more details on how to use `docker-compose` please head to the official [documentation of Docker Compose](https://docs.docker.com/compose/)
 
 ## Contributing
