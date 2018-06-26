@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  exporter:
+    build:
+      context: .
+    image: rq-prometheus-exporter
+    ports:
+      - 4567:8000
+    volumes:
+      - .:/app
+    command:
+      - gunicorn
+      - "-b 0.0.0.0:8000"
+      - "-w 1"
+      - "--reload"
+      - api:api
