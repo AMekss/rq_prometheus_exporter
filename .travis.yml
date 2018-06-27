@@ -3,9 +3,8 @@ sudo: required
 
 install:
   - docker-compose build
-  - docker-compose up -d
 script:
-  - docker-compose exec exporter pytest
+  - docker-compose run --rm exporter pytest
 services:
   - docker
 

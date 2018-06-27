@@ -17,6 +17,8 @@ services:
       - "-w 1"
       - "--reload"
       - api:api
+    depends_on:
+      - redis
 
   redis:
     image: redis:3.0.2
