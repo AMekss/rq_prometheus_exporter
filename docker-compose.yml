@@ -4,7 +4,7 @@ services:
   exporter:
     build:
       context: .
-    image: rq-prometheus-exporter
+    image: amekss/rq-prometheus-exporter
     ports:
       - 4567:8000
     volumes:
