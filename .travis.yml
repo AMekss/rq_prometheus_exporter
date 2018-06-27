@@ -8,3 +8,9 @@ script:
   - docker-compose exec exporter pytest
 services:
   - docker
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
