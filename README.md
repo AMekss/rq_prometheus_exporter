@@ -25,6 +25,13 @@ where `4567` is the port on docker host you'd like to expose exporter service to
 
 **Note:** For more details on how to use `docker` please head to the official [documentation of Docker](https://docs.docker.com/)
 
+## Available metrics
+```
+rq_enqueued_jobs        gauge   The total number of enqueued jobs (labels: queue_name)
+rq_workers              gauge   The number of workers performing jobs (labels: name, queues, state)
+```
+While it's good enough for setting up basic monitoring and alerting in Prometheus, in future would be good to comeback to this and check how to extend it with more metrics
+
 ## Development & Testing
 
 #### Build development environment
