@@ -1,5 +1,7 @@
 # Prometheus exporter for RQ
 
+[![Build Status](https://travis-ci.org/AMekss/rq_prometheus_exporter.svg?branch=master)](https://travis-ci.org/AMekss/rq_prometheus_exporter)
+
 [RQ](http://python-rq.org/) (Redis Queue) is a simple Python library for queueing jobs. And this project aims to expose its metrics to [Prometheus](https://prometheus.io/).
 
 ## Build & Usage
