@@ -11,6 +11,11 @@
 docker build -t rq-prometheus-exporter .
 ```
 
+#### Pull it from [dockerhub](https://hub.docker.com/r/amekss/rq-prometheus-exporter/)
+```
+docker pull amekss/rq-prometheus-exporter:stable
+```
+
 #### Run it
 There is `RQ_REDIS_URI` environment variable available to setup URL for the redis used by RQ
 ```
