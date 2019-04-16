@@ -30,6 +30,12 @@ where `4567` is the port on docker host you'd like to expose exporter service to
 rq_enqueued_jobs        gauge   The total number of enqueued jobs (labels: queue_name)
 rq_workers              gauge   The number of workers performing jobs (labels: name, queues, state)
 ```
+
+You can skip scraping `rq_workers` metric by setting the environment variable
+`RQPE_SCRAPE_WORKERS` to anything else then `true`, `yes`, `t` or `1`. This is
+useful in the scenarios you are running RQ workers on preemtible nodes where
+new spawned workers get new unique hostnames each time.
+
 While it's good enough for setting up basic monitoring and alerting in Prometheus, in future would be good to comeback to this and check how to extend it with more metrics
 
 ## Development & Testing
