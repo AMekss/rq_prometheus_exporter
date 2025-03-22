@@ -1,4 +1,4 @@
 rq
 flask>=1.0.0
-gunicorn==22.0.0
+gunicorn==23.0.0
 pytest
